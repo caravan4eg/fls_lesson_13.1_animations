@@ -1,0 +1,159 @@
+.header {
+	margin: 0px 0px 35px 0px;
+	width: 100%;
+	/* background: url('../img/bg_repeat.jpg') 0 0 repeat; */
+}
+
+h1 {
+	height: 72px;
+	line-height: 72px;
+	font-weight: bold;
+	font-size: 24px;
+	animation: slide-h1 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes slide-h1 {
+	from {
+		margin-left: 100%;
+		width: 300%;
+	}
+
+	to {
+		margin-left: 0%;
+		width: 100%;
+	}
+	  75% {
+	  	font-size: 300%;
+	  	margin-left: 25%;
+	  	width: 150%;
+	  }
+}
+
+.menu {
+	overflow: hidden;
+	margin: 25px 0px 25px 0px;
+	max-width: 175px;
+}
+
+.menu__item {
+	transform: translateX(-100%);
+	transition-duration: 0.3s;
+}
+
+.menu__list {
+	background-color: greenyellow;
+	padding: 15px 0px 15px 45px;
+	transform: translateX(-100%);
+	transition: all 0.3s ease 0s;
+}
+
+.menu__item:not(:last-child) {
+	margin: 0px 0px 10px 0px;
+}
+
+.menu:hover .menu__list {
+	transform: translateX(0);
+}
+
+.menu:hover .menu__item:nth-child(1) {
+	transform: translateX(0);
+	transition-delay: .1s;
+}
+
+.menu:hover .menu__item:nth-child(2) {
+	transform: translateX(0);
+	transition-delay: .2s;
+}
+
+.menu:hover .menu__item:nth-child(3) {
+	transform: translateX(0);
+	transition-delay: .3s;
+}
+
+.menu:hover .menu__item:nth-child(4) {
+	transform: translateX(0);
+	transition-delay: .4s;
+}
+
+.roll-out {
+	overflow: hidden;
+}
+
+.roll-out__item {
+	background: url('../img/header-bg2.jpg') center/cover no-repeat;
+	height: 175px;
+	padding: 35px;
+	transform: translateX(-110%);
+	transition: all 0.3s ease 0.2s;
+
+}
+
+.roll-out__title {
+	color: orangered;
+	text-align: center;
+	font-size: 32px;
+	font-weight: 900;
+	margin: 0px 0px 75px 0px;
+	transition-duration: 0.3s;
+	transform: translateY(-100%);
+	animation: title 2s cubic-bezier(0.1, 0.7, 1.0, 0.1) 0s infinite;
+
+}
+
+.roll-out__subtitle {
+	color: whitesmoke;
+	text-align: center;
+	font-size: 24px;
+	font-weight: 700;
+	transition-duration: 0.3s;
+	transform: translateY(-100%);
+	animation: subtitle 3s ease-in-out 0s infinite;
+
+}
+
+.roll-out:hover .roll-out__item {
+	transform: translateX(0);
+}
+
+.roll-out:hover .roll-out__title {
+	transform: translateY(0);
+	transition-delay: .6s;
+}
+
+.roll-out:hover .roll-out__subtitle {
+	transform: translateY(0);
+	transition-delay: .8s;
+}
+
+@keyframes title {
+	0% {
+		transform: rotate(0deg) scale(1);
+	}
+
+	50% {
+		background-color: floralwhite;
+		border-radius: 50%;
+		transform: rotate(90deg) scale(0.5);
+	}
+
+	100% {
+		transform: rotate(360deg) scale(3);
+
+	}
+}
+
+@keyframes subtitle {
+	0% {
+		transform: translateX(-100px);
+
+	}
+
+	50% {
+		transform: translateX(100px);
+	}
+
+	100% {
+		transform: translateX(-100px);
+
+	}
+}
